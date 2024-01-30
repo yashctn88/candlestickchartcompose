@@ -1,3 +1,7 @@
+jdk:
+  - openjdk17
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
 install:
-  FILE="-Dfile=candlestickchartcompose-release.aar"
-  mvn install:install-file $FILE -DgroupId=com.github.yashctn88 -DartifactId=candlestickchartcompose -Dversion=1.0 -Dpackaging=aar -DpomFile=pom.xml
+  - FILE="-Dfile=candlestickchartcompose.aar"
+  - mvn install:install-file $FILE -DgroupId=com.github.yashctn88 -DartifactId=candlestickchartcompose -Dversion=1.0 -Dpackaging=aar -DpomFile=pom.xml
